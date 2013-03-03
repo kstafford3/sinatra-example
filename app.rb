@@ -1,8 +1,13 @@
-get '/' do
-    "the time where this server lives is #{Time.now}
-    <br /><br />check out your <a href=\"/agent\">user_agent</a>"
+require 'erb'
+
+def say_hello(subject)
+  erb :index, :locals => { :subject => subject }
 end
 
-get '/agent' do
-    "you're using #{request.user_agent}"
+get '/:name' do
+  say_hello(params[:name])
+end
+
+get '/*' do
+  say_hello("World")
 end
