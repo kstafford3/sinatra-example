@@ -4,7 +4,7 @@ Sinatra on OpenShift
 This git repository helps you get up and running quickly w/ a Sinatra installation
 on OpenShift.
 
-In my fork I'm using the diy cartridge. I've been using Ruby 1.9.3.
+In my fork I'm using the ruby-1.9 cartridge.
 I've also added a views folder with some placeholder ERBs.
 
 Thanks to OpenShift for making the original quickstart available (openshift/sinatra-example)
@@ -14,9 +14,9 @@ Running on OpenShift
 
 Create an account at http://openshift.redhat.com/
 
-Create a diy-0.1 application
+Create a ruby-1.9 application
 
-    rhc app create -a sinatra -t diy-0.1
+    rhc app create -a sinatra -t ruby-1.9
 
 Add this upstream sinatra repo
 
